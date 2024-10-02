@@ -256,12 +256,14 @@ Hasil:
 
 4. Selesaikan Codelabs: Your first Flutter app, lalu buatlah laporan praktikumnya dan push ke repository GitHub Anda!
 
+!['Repository for task 4'](https://github.com/RaihanFazzaufaR/first_flutter_project)
+
+5. README.md berisi: capture hasil akhir tiap praktikum (side-by-side, bisa juga berupa file GIF agar terlihat proses perubahan ketika ada aksi dari pengguna) dengan menampilkan NIM dan Nama Anda sebagai ciri pekerjaan Anda.
+
 !['task5_1'](laporan/picture/task5_1.png)
 
 !['task5_2'](laporan/picture/task5_2.png)
 
 !['task5_3'](laporan/picture/task5_3.png)
-
-5. README.md berisi: capture hasil akhir tiap praktikum (side-by-side, bisa juga berupa file GIF agar terlihat proses perubahan ketika ada aksi dari pengguna) dengan menampilkan NIM dan Nama Anda sebagai ciri pekerjaan Anda.
 
 6. Kumpulkan berupa link repository/commit GitHub Anda kepada dosen yang telah disepakati!
