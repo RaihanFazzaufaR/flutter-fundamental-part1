@@ -2,77 +2,103 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/basic_widget/image_widget.dart';
 import 'package:hello_world/basic_widget/text_widget.dart';
 import 'dart:async';
+import 'package:hello_world/basic_widget/scaffold_widget.dart';
+import 'package:hello_world/basic_widget/dialog_widget.dart';
+import 'package:hello_world/basic_widget/input_widget.dart';
+import 'package:hello_world/basic_widget/date_time_picker_widget.dart';
 
-void main() => runApp(const MyApp());
+
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext) {
     return const MaterialApp(
-      title: 'Contoh Date Picker',
-      home: MyHomePage(title: 'Contoh Date Picker'),
+      debugShowCheckedModeBanner: false,
+      // home: ScaffoldWidget(title: 'My Increment App'),
+      // home: DialogWidget(),
+      // home: InputWidget(),
+      home: DateTimePickerWidget(title: 'Date & Time Picker'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+// // Pratikum 5 langkah 6
+// void main() => runApp(const MyApp());
 
-  final String title;
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       title: 'Contoh Date Picker',
+//       home: MyHomePage(title: 'Contoh Date Picker'),
+//     );
+//   }
+// }
 
-class _MyHomePageState extends State<MyHomePage> {
-  // Variable/State untuk mengambil tanggal
-  DateTime selectedDate = DateTime.now();
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  //  Initial SelectDate FLutter
-  Future<void> _selectDate(BuildContext context) async {
-    // Initial DateTime FIinal Picked
-    final DateTime? picked = await showDatePicker(
-        context: context,
-        initialDate: selectedDate,
-        firstDate: DateTime(2015, 8),
-        lastDate: DateTime(2101));
-    if (picked != null && picked != selectedDate) {
-      setState(() {
-        selectedDate = picked;
-      });
-    }
-  }
+//   final String title;
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text("${selectedDate.toLocal()}".split(' ')[0]),
-            const SizedBox(
-              height: 20.0,
-            ),
-            ElevatedButton(
-              onPressed: () => {
-                _selectDate(context),
-                // ignore: avoid_print
-                print(selectedDate.day + selectedDate.month + selectedDate.year)
-              },
-              child: const Text('Pilih Tanggal'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   // Variable/State untuk mengambil tanggal
+//   DateTime selectedDate = DateTime.now();
+
+//   //  Initial SelectDate FLutter
+//   Future<void> _selectDate(BuildContext context) async {
+//     // Initial DateTime FIinal Picked
+//     final DateTime? picked = await showDatePicker(
+//         context: context,
+//         initialDate: selectedDate,
+//         firstDate: DateTime(2015, 8),
+//         lastDate: DateTime(2101));
+//     if (picked != null && picked != selectedDate) {
+//       setState(() {
+//         selectedDate = picked;
+//       });
+//     }
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(widget.title),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisSize: MainAxisSize.min,
+//           children: <Widget>[
+//             Text("${selectedDate.toLocal()}".split(' ')[0]),
+//             const SizedBox(
+//               height: 20.0,
+//             ),
+//             ElevatedButton(
+//               onPressed: () => {
+//                 _selectDate(context),
+//                 // ignore: avoid_print
+//                 print(selectedDate.day + selectedDate.month + selectedDate.year)
+//               },
+//               child: const Text('Pilih Tanggal'),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // // Praktikum 5 Langkah 5
 // void main() {
